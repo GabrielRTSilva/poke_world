@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/main_style.css">
+    <script src = '/static/scripts/main-script.js'></script>
+    <title>Atualização Automática</title>
+</head>
+<body>
+    <div id = 'main-bg'>
+        <div id = 'side-menu'>
+            <img id = 'img-logo' src="/static/images/logo.png" alt="Logo">
+            <p id = 'titulo-side-menu'>SELECIONE A REGIÃO</p>
+                {% for regiao in lista_r %}  <!-- Itera sobre cada regiao contida na lista_r = lista_regiao(app.py) -->
+            <div class='region-option' type="button"   
+                data-name = "{{regiao.name}}"
+                data-img = "{{regiao.img}}"
+                data-description = "{{regiao.description}}"
+                data-lista-pokemon = {{regiao.pokemons}}>
+                
+                <p class = 'texto-region-option'>{{regiao.name}}</p>
+            </div>
+                {% endfor %}
+        </div>
+        <div id = 'content-menu'>
+            <div id = 'box-logo-main'>
+                <img id = 'logo-main' src="/static/images/logo.png" alt="Logo">               
+            </div>
+            <div id = 'box-text-main'>
+                <p class = 'text'> 
+                    Prepare-se para uma jornada épica através do vasto e fascinante universo Pokémon. 
+                    No PokeWorld, você tem a chave para explorar todas as nove regiões do mundo Pokémon.
+                    Descubra informações detalhadas sobre cada Pokémon, incluindo suas características, habilidades, evoluções e muito mais.
+                </p>
+                <h2 class = 'subtitle'>About</h2>
+                <p class = 'text'>Todas as informações contidas nessa aplicação são públicas e podem ser acessadas através dos links abaixo.</p>
+                <p class = 'text'> • Imagens e Descrições</p>
+                <p class = 'text'> • Dados sobre Pokemon</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

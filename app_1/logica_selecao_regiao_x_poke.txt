@@ -1,0 +1,16 @@
+A ideia da lógica para a Main é a seguinte:
+
+for <regiao> in <regioes>
+  if <regiao.nome> == <região_selecionada.nome>:
+    Modifica o Titulo da tela Amostragem --> Região de <região name>
+    Modifica a imagem para a da região
+    Modifica o subtitulo para o da região
+    Modifica a lista em que serão buscados os pokemons
+    if selecionado.<nome_pokemon>:
+        Request das informações do pokemons
+        Adiciona as informações no card Pokemon
+
+
+- CRIAR OBJETO regiao
+  - self: nome, img, descricao, pokemons(objetos)
+
